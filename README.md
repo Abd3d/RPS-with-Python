@@ -18,7 +18,7 @@ I added another GitHub Account and named it Abd3d2
 ## Main steps
 
 - Create a Rock Paper Scissors Roadmap
-  [RPS Roadmap link](https://docs.google.com/document/d/1ckt3gj9beek6shda3wzua-2jtwtfrcgpprtpavoyork/edit?usp=sharing)
+  [RPS Roadmap link](https://docs.google.com/document/d/1ckT3gJ9BeEK6shDa3wzuA-2jtwTfrCgpPRTPAvoyork/edit)
 - Create repository
   - Write project description
     - Select public
