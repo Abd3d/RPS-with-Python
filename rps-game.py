@@ -55,6 +55,52 @@ def validation(value):
 validation('inputRounds')
 playerLives = numberOfRounds
 computerLives = numberOfRounds
+# =========== Step 4: Comparing Player and Computer Chooices ===========
+# printResult function: print the result after comparing process
+
+
+def printResult(win):
+    if (win == 'w'):
+        print(Fore.GREEN + playerName.upper() +
+              " Wins," + Fore.RED + " Computer Loses")
+    else:
+        print(Fore.RED + playerName.upper() +
+              " Loses, " + Fore.GREEN + "Computer Wins")
+
+# =============Step 4:Comparing function: applay the game rules between user and computer choices
+
+
+def comparing(pChooice, cChooice):
+    global computerLives
+    global playerLives
+
+    if pChooice == cChooice:
+        print(Fore.YELLOW + "Draw")
+    elif pChooice == "Rock":
+        if(cChooice != "Paper"):
+            printResult('w')
+            computerLives -= 1
+        else:
+            printResult('l')
+            playerLives -= 1
+
+    elif pChooice == "Paper":
+        if(cChooice != "Scissors"):
+            printResult('w')
+            computerLives -= 1
+        else:
+            printResult('l')
+            playerLives -= 1
+
+    elif pChooice == "Scissors":
+        if(cChooice != "Rock"):
+            printResult('w')
+            computerLives -= 1
+        else:
+            printResult('l')
+            playerLives -= 1
+
+
 # =========== Steps 3:Player chooices ===========
 counter = 1
 totalRounds = numberOfRounds
@@ -78,6 +124,7 @@ while numberOfRounds > 0:
     else:
         playerChooice = "Scissors"
     print(playerChooice + "   " + computerChooice)
+    comparing(playerChooice, computerChooice)  # step 4
     numberOfRounds -= 1
     counter += 1
     playerChooice = ""
