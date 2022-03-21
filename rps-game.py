@@ -128,3 +128,10 @@ while numberOfRounds > 0:
     numberOfRounds -= 1
     counter += 1
     playerChooice = ""
+# ******************** Step 5: Print the Result *****************
+if(computerLives == playerLives):
+    print(Back.YELLOW + "Draw")
+elif (computerLives > playerLives):
+    print(Back.RED + "Game Over; Try Again!")
+else:
+    print(Back.GREEN + str(playerName).upper() + " Is The Winner!!")
