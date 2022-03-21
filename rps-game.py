@@ -43,8 +43,41 @@ def validation(value):
                     numberOfRounds = 0
             else:
                 numberOfRounds = 0
+    if(value == "inputRPS"):
+        while playerChooice == "":
+            playerChooice = input(
+                "Choose one: R for Rock, P for Paper, S for Sciessors, Q to Quit : ")
+            playerChooice = playerChooice.lower()
+            if(playerChooice != 'r' and playerChooice != 'p' and playerChooice != 's' and playerChooice != 'q'):
+                playerChooice = ""
 
 
 validation('inputRounds')
 playerLives = numberOfRounds
 computerLives = numberOfRounds
+# =========== Steps 3:Player chooices ===========
+counter = 1
+totalRounds = numberOfRounds
+while numberOfRounds > 0:
+    print(Back.LIGHTBLUE_EX + "Round " +
+          str(counter) + " of " + str(totalRounds))
+
+    validation("inputRPS")
+    if playerChooice.lower() == 'q':
+        quit = input("Press Y if you want to quit? ")
+        if quit.lower() == 'y':
+            exit()
+        else:
+            playerChooice = input(
+                "Choose one: R for Rock, P for Paper, S for Sciessors, Q to Quit : ")
+    computerChooice = rps[randint(0, 2)]
+    if playerChooice.lower() == 'r':
+        playerChooice = "Rock"
+    elif playerChooice.lower() == 'p':
+        playerChooice = "Paper"
+    else:
+        playerChooice = "Scissors"
+    print(playerChooice + "   " + computerChooice)
+    numberOfRounds -= 1
+    counter += 1
+    playerChooice = ""
