@@ -34,7 +34,7 @@ I added another GitHub Account and named it Abd3d2
 - Scissors beats paper
 - Paper beats rock
 
-![](img/rps.png)
+![](../img/rps.png)
 
 ## MIT License
 
